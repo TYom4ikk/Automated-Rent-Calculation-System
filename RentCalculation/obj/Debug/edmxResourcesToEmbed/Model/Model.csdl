@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RentCalculationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Apartments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Area" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="ResidentsCount" Type="Byte" Nullable="false" />
+    <Property Name="Floor" Type="Int16" Nullable="false" />
+    <Property Name="BuildingId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Buildings" Relationship="Self.FK_Apartments_Buildings" FromRole="Apartments" ToRole="Buildings" />
+    <NavigationProperty Name="MeterReadings" Relationship="Self.FK_MeterReadings_Apartments" FromRole="Apartments" ToRole="MeterReadings" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Apartments" FromRole="Apartments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="BuildingFacilities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuildingId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" />
+    <NavigationProperty Name="Buildings" Relationship="Self.FK_BuildingFacilities_Buildings" FromRole="BuildingFacilities" ToRole="Buildings" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_BuildingFacilities_Services" FromRole="BuildingFacilities" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Buildings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RegionId" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Apartments" Relationship="Self.FK_Apartments_Buildings" FromRole="Buildings" ToRole="Apartments" />
+    <NavigationProperty Name="BuildingFacilities" Relationship="Self.FK_BuildingFacilities_Buildings" FromRole="Buildings" ToRole="BuildingFacilities" />
+    <NavigationProperty Name="Regions" Relationship="Self.FK_Buildings_Regions" FromRole="Buildings" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="InvoiceDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="Consumption" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="7" Scale="2" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_InvoiceDetails_Invoices" FromRole="InvoiceDetails" ToRole="Invoices" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_InvoiceDetails_Services" FromRole="InvoiceDetails" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Invoices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApartmetntId" Type="Int32" />
+    <Property Name="BuildingId" Type="Int32" />
+    <Property Name="PeriodStart" Type="DateTime" Precision="0" />
+    <Property Name="PeriodEnd" Type="DateTime" Precision="0" />
+    <Property Name="TotalAmound" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="InvoiceDetails" Relationship="Self.FK_InvoiceDetails_Invoices" FromRole="Invoices" ToRole="InvoiceDetails" />
+  </EntityType>
+  <EntityType Name="MeterReadings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ApartmentId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Apartments" Relationship="Self.FK_MeterReadings_Apartments" FromRole="MeterReadings" ToRole="Apartments" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_MeterReadings_Services" FromRole="MeterReadings" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Buildings" Relationship="Self.FK_Buildings_Regions" FromRole="Regions" ToRole="Buildings" />
+    <NavigationProperty Name="Tariffs" Relationship="Self.FK_Tariffs_Regions" FromRole="Regions" ToRole="Tariffs" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BuildingFacilities" Relationship="Self.FK_BuildingFacilities_Services" FromRole="Services" ToRole="BuildingFacilities" />
+    <NavigationProperty Name="InvoiceDetails" Relationship="Self.FK_InvoiceDetails_Services" FromRole="Services" ToRole="InvoiceDetails" />
+    <NavigationProperty Name="MeterReadings" Relationship="Self.FK_MeterReadings_Services" FromRole="Services" ToRole="MeterReadings" />
+    <NavigationProperty Name="Tariffs" Relationship="Self.FK_Tariffs_Services" FromRole="Services" ToRole="Tariffs" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tariffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="RegionId" Type="Int16" />
+    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Regions" Relationship="Self.FK_Tariffs_Regions" FromRole="Tariffs" ToRole="Regions" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_Tariffs_Services" FromRole="Tariffs" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="Int16" Nullable="false" />
+    <Property Name="ApartmentId" Type="Int32" />
+    <NavigationProperty Name="Apartments" Relationship="Self.FK_Users_Apartments" FromRole="Users" ToRole="Apartments" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK_Apartments_Buildings">
+    <End Role="Buildings" Type="Self.Buildings" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Apartments" Type="Self.Apartments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Buildings">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartments">
+        <PropertyRef Name="BuildingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeterReadings_Apartments">
+    <End Role="Apartments" Type="Self.Apartments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MeterReadings" Type="Self.MeterReadings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MeterReadings">
+        <PropertyRef Name="ApartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Apartments">
+    <End Role="Apartments" Type="Self.Apartments" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ApartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingFacilities_Buildings">
+    <End Role="Buildings" Type="Self.Buildings" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BuildingFacilities" Type="Self.BuildingFacilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Buildings">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingFacilities">
+        <PropertyRef Name="BuildingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuildingFacilities_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="0..1" />
+    <End Role="BuildingFacilities" Type="Self.BuildingFacilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BuildingFacilities">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Buildings_Regions">
+    <End Role="Regions" Type="Self.Regions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Buildings" Type="Self.Buildings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Buildings">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceDetails_Invoices">
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InvoiceDetails" Type="Self.InvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InvoiceDetails">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoiceDetails_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="0..1" />
+    <End Role="InvoiceDetails" Type="Self.InvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InvoiceDetails">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeterReadings_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="MeterReadings" Type="Self.MeterReadings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MeterReadings">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tariffs_Regions">
+    <End Role="Regions" Type="Self.Regions" Multiplicity="0..1" />
+    <End Role="Tariffs" Type="Self.Tariffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tariffs">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tariffs_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Tariffs" Type="Self.Tariffs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tariffs">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RentCalculationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apartments" EntityType="Self.Apartments" />
+    <EntitySet Name="BuildingFacilities" EntityType="Self.BuildingFacilities" />
+    <EntitySet Name="Buildings" EntityType="Self.Buildings" />
+    <EntitySet Name="InvoiceDetails" EntityType="Self.InvoiceDetails" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoices" />
+    <EntitySet Name="MeterReadings" EntityType="Self.MeterReadings" />
+    <EntitySet Name="Regions" EntityType="Self.Regions" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Services" EntityType="Self.Services" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Tariffs" EntityType="Self.Tariffs" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Apartments_Buildings" Association="Self.FK_Apartments_Buildings">
+      <End Role="Buildings" EntitySet="Buildings" />
+      <End Role="Apartments" EntitySet="Apartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeterReadings_Apartments" Association="Self.FK_MeterReadings_Apartments">
+      <End Role="Apartments" EntitySet="Apartments" />
+      <End Role="MeterReadings" EntitySet="MeterReadings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Apartments" Association="Self.FK_Users_Apartments">
+      <End Role="Apartments" EntitySet="Apartments" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingFacilities_Buildings" Association="Self.FK_BuildingFacilities_Buildings">
+      <End Role="Buildings" EntitySet="Buildings" />
+      <End Role="BuildingFacilities" EntitySet="BuildingFacilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuildingFacilities_Services" Association="Self.FK_BuildingFacilities_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="BuildingFacilities" EntitySet="BuildingFacilities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Buildings_Regions" Association="Self.FK_Buildings_Regions">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Buildings" EntitySet="Buildings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceDetails_Invoices" Association="Self.FK_InvoiceDetails_Invoices">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceDetails_Services" Association="Self.FK_InvoiceDetails_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="InvoiceDetails" EntitySet="InvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeterReadings_Services" Association="Self.FK_MeterReadings_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="MeterReadings" EntitySet="MeterReadings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tariffs_Regions" Association="Self.FK_Tariffs_Regions">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Tariffs" EntitySet="Tariffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tariffs_Services" Association="Self.FK_Tariffs_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="Tariffs" EntitySet="Tariffs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
