@@ -20,7 +20,7 @@ namespace RentCalculation.Model
         }
     
         public int Id { get; set; }
-        public Nullable<int> ApartmetntId { get; set; }
+        public Nullable<int> ApartmentId { get; set; }
         public Nullable<int> BuildingId { get; set; }
         public Nullable<System.DateTime> PeriodStart { get; set; }
         public Nullable<System.DateTime> PeriodEnd { get; set; }

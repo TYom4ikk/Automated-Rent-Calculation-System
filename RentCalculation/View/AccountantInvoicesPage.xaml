@@ -1,0 +1,39 @@
+<Page x:Class="RentCalculation.View.AccountantInvoicesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Управление квитанциями">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <ComboBox x:Name="BuildingComboBox" Width="200" Margin="0,0,10,0"/>
+                <DatePicker x:Name="StartDatePicker" Margin="0,0,10,0"/>
+                <DatePicker x:Name="EndDatePicker" Margin="0,0,10,0"/>
+                <Button x:Name="GenerateButton" Content="Сформировать" Click="GenerateButton_Click"/>
+            </StackPanel>
+            <Button x:Name="ExportButton" Content="Экспорт в Excel" Click="ExportButton_Click" 
+                    HorizontalAlignment="Right" Width="150"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="InvoicesDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Здание" Binding="{Binding Buildings.Address}" Width="200"/>
+                <DataGridTextColumn Header="Квартира" Binding="{Binding Apartments.Id}" Width="100"/>
+                <DataGridTextColumn Header="Период" Binding="{Binding PeriodStart, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalAmound, StringFormat=N2}" Width="100"/>
+                <DataGridTextColumn Header="Дата создания" Binding="{Binding CreatedAt, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTemplateColumn Header="Действия" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Просмотр" Click="ViewButton_Click" Tag="{Binding Id}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page> 

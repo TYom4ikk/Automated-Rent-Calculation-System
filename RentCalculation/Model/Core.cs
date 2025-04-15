@@ -9,6 +9,6 @@ namespace RentCalculation.Model
     public static class Core
     {
         public static RentCalculationEntities context = new RentCalculationEntities();
-
+        public static Users CurrentUser { get; set; }
     }
 }

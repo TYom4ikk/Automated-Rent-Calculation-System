@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RentCalculation.View;
 
 namespace RentCalculation
 {
@@ -23,7 +24,7 @@ namespace RentCalculation
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Uri("View\\RegistrationPage.xaml", UriKind.Relative));
+            MainFrame.Navigate(new LoginPage());
         }
     }
 }

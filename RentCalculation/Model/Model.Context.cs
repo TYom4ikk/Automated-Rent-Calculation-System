@@ -34,7 +34,6 @@ namespace RentCalculation.Model
         public DbSet<Regions> Regions { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Services> Services { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Tariffs> Tariffs { get; set; }
         public DbSet<Users> Users { get; set; }
     }

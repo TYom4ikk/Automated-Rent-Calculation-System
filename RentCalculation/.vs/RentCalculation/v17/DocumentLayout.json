@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\view\\registrationpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:view\\registrationpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\admin\\desktop\\automated-rent-calculation-system\\rentcalculation\\view\\accountantinvoicespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:view\\accountantinvoicespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\admin\\desktop\\automated-rent-calculation-system\\rentcalculation\\view\\habitantview\\habitantmainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:view\\habitantview\\habitantmainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\view\\habitantview\\paymentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:view\\habitantview\\paymentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\viewmodel\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:viewmodel\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:authentication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\model\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:model\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\model\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:model\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\view\\registrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:view\\registrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\zhaku\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\automated-rent-calculation-system\\rentcalculation\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|c:\\users\\admin\\desktop\\automated-rent-calculation-system\\rentcalculation\\viewmodel\\accountantinvoicespageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D3446E9-0238-4441-8682-59600F78C859}|RentCalculation.csproj|solutionrelative:viewmodel\\accountantinvoicespageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,130 +22,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 205,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PaymentPage.xaml",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\HabitantView\\PaymentPage.xaml",
-              "RelativeDocumentMoniker": "View\\HabitantView\\PaymentPage.xaml",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\HabitantView\\PaymentPage.xaml",
-              "RelativeToolTip": "View\\HabitantView\\PaymentPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T05:25:44.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegistrationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\ViewModel\\RegistrationViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\RegistrationViewModel.cs",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\ViewModel\\RegistrationViewModel.cs",
-              "RelativeToolTip": "ViewModel\\RegistrationViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "HabitantMainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\View\\HabitantView\\HabitantMainPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\HabitantView\\HabitantMainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\View\\HabitantView\\HabitantMainPage.xaml.cs",
+              "RelativeToolTip": "View\\HabitantView\\HabitantMainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T04:15:54.666Z",
+              "WhenOpened": "2025-04-15T01:17:46.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegistrationPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\RegistrationPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\RegistrationPage.xaml.cs",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\RegistrationPage.xaml.cs",
-              "RelativeToolTip": "View\\RegistrationPage.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "AccountantInvoicesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\View\\AccountantInvoicesPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\AccountantInvoicesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\View\\AccountantInvoicesPage.xaml.cs",
+              "RelativeToolTip": "View\\AccountantInvoicesPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T04:15:27.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T03:26:10.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Authentication.cs",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Authentication.cs",
-              "RelativeDocumentMoniker": "Authentication.cs",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Authentication.cs",
-              "RelativeToolTip": "Authentication.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T04:15:53.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Core.cs",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Model\\Core.cs",
-              "RelativeDocumentMoniker": "Model\\Core.cs",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Model\\Core.cs",
-              "RelativeToolTip": "Model\\Core.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T05:20:09.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Model.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Model\\Model.edmx",
-              "RelativeDocumentMoniker": "Model\\Model.edmx",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\Model\\Model.edmx [Diagram1]",
-              "RelativeToolTip": "Model\\Model.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-03-12T05:19:25.983Z",
-              "EditorCaption": " [Diagram1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegistrationPage.xaml",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\RegistrationPage.xaml",
-              "RelativeDocumentMoniker": "View\\RegistrationPage.xaml",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\View\\RegistrationPage.xaml",
-              "RelativeToolTip": "View\\RegistrationPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-12T04:13:14.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\zhaku\\Desktop\\\u041A\u0443\u0440\u0441\u043E\u0432\u044B\u0435\\Automated-Rent-Calculation-System\\RentCalculation\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T03:26:06.913Z",
+              "WhenOpened": "2025-04-15T01:04:05.121Z",
               "EditorCaption": ""
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "93be3076-5669-4934-a066-73af815d92ba",
+        "Display": 1,
+        "X": 332,
+        "Y": -49,
+        "Width": 1580,
+        "Height": 682,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
         {
-          "DockedWidth": 215,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountantInvoicesPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\ViewModel\\AccountantInvoicesPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\AccountantInvoicesPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Automated-Rent-Calculation-System\\RentCalculation\\ViewModel\\AccountantInvoicesPageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\AccountantInvoicesPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T01:05:01.122Z",
+              "EditorCaption": ""
             }
           ]
         }

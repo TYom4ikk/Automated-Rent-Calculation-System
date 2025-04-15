@@ -62,7 +62,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Authentication.cs" />
     <Compile Include="Model\Apartments.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -73,6 +72,22 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Core.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="Model\InvoiceDetails.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -106,42 +121,103 @@
     <Compile Include="Model\Services.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Tariffs.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Users.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\RegistrationViewModel.cs" />
-    <Compile Include="View\HabitantView\PaymentPage.xaml.cs">
-      <DependentUpon>PaymentPage.xaml</DependentUpon>
+    <Compile Include="ViewModel\AccountantInvoicesPageViewModel.cs" />
+    <Compile Include="ViewModel\AccountantMainPageViewModel.cs" />
+    <Compile Include="ViewModel\AdminMainPageViewModel.cs" />
+    <Compile Include="ViewModel\BuildingsPageViewModel.cs" />
+    <Compile Include="ViewModel\InvoiceDetailsPageViewModel.cs" />
+    <Compile Include="ViewModel\InvoicesPageViewModel.cs" />
+    <Compile Include="ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="ViewModel\MeterReadingsPageViewModel.cs" />
+    <Compile Include="View\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RegistrationPage.xaml.cs">
-      <DependentUpon>RegistrationPage.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="View\HabitantView\PaymentPage.xaml">
+    <Page Include="View\AccountantMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RegistrationPage.xaml">
+    <Compile Include="View\AccountantMainPage.xaml.cs">
+      <DependentUpon>AccountantMainPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\AccountantInvoicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="View\AccountantInvoicesPage.xaml.cs">
+      <DependentUpon>AccountantInvoicesPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\TariffsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\TariffsPage.xaml.cs">
+      <DependentUpon>TariffsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\AdminMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\AdminMainPage.xaml.cs">
+      <DependentUpon>AdminMainPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\BuildingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\BuildingsPage.xaml.cs">
+      <DependentUpon>BuildingsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\ServicesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\ServicesPage.xaml.cs">
+      <DependentUpon>ServicesPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\HabitantView\HabitantMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\HabitantView\HabitantMainPage.xaml.cs">
+      <DependentUpon>HabitantMainPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\HabitantView\MeterReadingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\HabitantView\MeterReadingsPage.xaml.cs">
+      <DependentUpon>MeterReadingsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\HabitantView\InvoicesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\HabitantView\InvoicesPage.xaml.cs">
+      <DependentUpon>InvoicesPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\HabitantView\InvoiceDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\HabitantView\InvoiceDetailsPage.xaml.cs">
+      <DependentUpon>InvoiceDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ServicesPageViewModel.cs" />
+    <Compile Include="ViewModel\TariffsPageViewModel.cs" />
+    <Compile Include="ViewModel\UserPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -180,11 +256,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -192,6 +269,5 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

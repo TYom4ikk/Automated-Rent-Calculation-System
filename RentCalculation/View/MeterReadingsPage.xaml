@@ -1,0 +1,45 @@
+<Page x:Class="RentCalculation.View.MeterReadingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RentCalculation.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Показания счетчиков">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <ComboBox x:Name="ServiceComboBox" Width="200" Margin="0,0,10,0" 
+                          DisplayMemberPath="Name"/>
+                <DatePicker x:Name="ReadingDatePicker" Width="150" Margin="0,0,10,0"/>
+                <TextBox x:Name="ValueTextBox" Width="100" Margin="0,0,10,0" 
+                         Text="Значение"/>
+                <Button x:Name="AddButton" Content="Добавить" Width="100" 
+                        Click="AddButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="MeterReadingsGrid" AutoGenerateColumns="False" 
+                  Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Услуга" Binding="{Binding Service.Name}" Width="*"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date, StringFormat=\{0:dd.MM.yyyy\}}" Width="*"/>
+                <DataGridTextColumn Header="Значение" Binding="{Binding Value}" Width="*"/>
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Click="DeleteButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page> 

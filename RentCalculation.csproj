@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsAppRuntime">
+
+  <PropertyGroup>
+    <TargetPlatform>Windows</TargetPlatform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RentCalculation</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseMaui>true</UseMaui>
+    <UseMSIX>true</UseMSIX>
+    <UseMSIXApp>true</UseMSIXApp>
+    <UseMSIXAppPackage>true</UseMSIXAppPackage>
+    <UseMSIXAppPackageDependencies>true</UseMSIXAppPackageDependencies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Include="View\InvoiceDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\InvoiceDetailsPage.xaml.cs">
+      <DependentUpon>InvoiceDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\BuildingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\BuildingsPage.xaml.cs">
+      <DependentUpon>BuildingsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\RolesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\RolesPage.xaml.cs">
+      <DependentUpon>RolesPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\TariffsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\TariffsPage.xaml.cs">
+      <DependentUpon>TariffsPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="View\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

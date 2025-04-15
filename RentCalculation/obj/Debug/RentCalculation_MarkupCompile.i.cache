@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\zhaku\Desktop\Курсовые\Automated-Rent-Calculation-System\RentCalculation\obj\Debug\
+C:\Users\Admin\Desktop\Automated-Rent-Calculation-System\RentCalculation\obj\Debug\
 RentCalculation
 none
 false
 DEBUG;TRACE
-C:\Users\zhaku\Desktop\Курсовые\Automated-Rent-Calculation-System\RentCalculation\App.xaml
-3-1142195572
+C:\Users\Admin\Desktop\Automated-Rent-Calculation-System\RentCalculation\App.xaml
+13-774725586
 2-95638413
-26-286872882
-182120749564
-MainWindow.xaml;View\HabitantView\PaymentPage.xaml;View\RegistrationPage.xaml;
+44-1960559824
+18-543876752
+MainWindow.xaml;View\LoginPage.xaml;View\AccountantMainPage.xaml;View\AccountantInvoicesPage.xaml;View\TariffsPage.xaml;View\AdminMainPage.xaml;View\UsersPage.xaml;View\BuildingsPage.xaml;View\ServicesPage.xaml;View\HabitantView\HabitantMainPage.xaml;View\HabitantView\MeterReadingsPage.xaml;View\HabitantView\InvoicesPage.xaml;View\HabitantView\InvoiceDetailsPage.xaml;
 
-True
+False
 

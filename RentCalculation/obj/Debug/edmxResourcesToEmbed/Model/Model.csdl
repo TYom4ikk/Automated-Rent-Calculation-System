@@ -5,6 +5,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
     <Property Name="Area" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
     <Property Name="ResidentsCount" Type="Byte" Nullable="false" />
     <Property Name="Floor" Type="Int16" Nullable="false" />
@@ -51,7 +52,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ApartmetntId" Type="Int32" />
+    <Property Name="ApartmentId" Type="Int32" />
     <Property Name="BuildingId" Type="Int32" />
     <Property Name="PeriodStart" Type="DateTime" Precision="0" />
     <Property Name="PeriodEnd" Type="DateTime" Precision="0" />
@@ -99,16 +100,6 @@
     <NavigationProperty Name="InvoiceDetails" Relationship="Self.FK_InvoiceDetails_Services" FromRole="Services" ToRole="InvoiceDetails" />
     <NavigationProperty Name="MeterReadings" Relationship="Self.FK_MeterReadings_Services" FromRole="Services" ToRole="MeterReadings" />
     <NavigationProperty Name="Tariffs" Relationship="Self.FK_Tariffs_Services" FromRole="Services" ToRole="Tariffs" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Tariffs">
     <Key>
@@ -306,7 +297,6 @@
     <EntitySet Name="Regions" EntityType="Self.Regions" />
     <EntitySet Name="Roles" EntityType="Self.Roles" />
     <EntitySet Name="Services" EntityType="Self.Services" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Tariffs" EntityType="Self.Tariffs" />
     <EntitySet Name="Users" EntityType="Self.Users" />
     <AssociationSet Name="FK_Apartments_Buildings" Association="Self.FK_Apartments_Buildings">

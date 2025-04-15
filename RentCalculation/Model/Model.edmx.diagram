@@ -4,17 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="857b15df28ca44fe8ceb53951d7c76f6" Name="Diagram1">
-        <EntityTypeShape EntityType="RentCalculationModel.Apartments" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+      <Diagram DiagramId="b325f37e210e421e840ce060dab1f3cb" Name="Diagram1">
+        <EntityTypeShape EntityType="RentCalculationModel.Apartments" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.BuildingFacilities" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Buildings" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.InvoiceDetails" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Invoices" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.MeterReadings" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Regions" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCalculationModel.Roles" Width="1.5" PointX="0.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentCalculationModel.Roles" Width="1.5" PointX="0.75" PointY="20.375" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Services" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="RentCalculationModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Tariffs" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="RentCalculationModel.Users" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
         <AssociationConnector Association="RentCalculationModel.FK_Apartments_Buildings" ManuallyRouted="false" />

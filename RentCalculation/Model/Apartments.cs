@@ -21,6 +21,7 @@ namespace RentCalculation.Model
         }
     
         public int Id { get; set; }
+        public int Number { get; set; }
         public decimal Area { get; set; }
         public byte ResidentsCount { get; set; }
         public short Floor { get; set; }
